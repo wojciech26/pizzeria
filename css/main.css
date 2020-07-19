@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Menu styles */
+
+.main-nav {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 20;
+}
+
+.main-nav #drop {
+    display: none;
+}
+
+.main-nav label {
+    display: none;
+}
+
+.main-nav .menu-item {
+    display: inline-block;
+}
+
+.main-nav .menu-item a {
+    color: #1ac056;
+    text-decoration: none;
+    padding: 15px;
+}
+
+/* Header styles */
+
+
+.main-header {
+    background-image: url(../img/pizzaonwood.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li:hover {
+    background: #ddd;
+}
+
+.main-header .main-header-content {
+    color: blue;
+}
+
+.main-header .main-header-content h1 {
+    font-size: 4em;
+}
+
+.menu-header,
+.film-header {
+    background-image: url(../img/paper.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-header-content h2 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.menu-header-content p {
+    padding-bottom: 0px;
+    margin-top:5px;
+    margin-bottom:5px;
+
+}
+
+
+
+/* responsive */
+
+@media (max-width: 768px) {
+    .main-nav {
+        display: block;
+    }
+
+    .main-nav .menu-item {
+        display: block;
+        padding: 15px;
+        text-align: right;
+    }
+
+    .main-nav .menu-item a {
+        padding-right: 0;
+    }
+
+    .main-nav label {
+        display: block;
+        font-size: 1.5em;
+        color: #1ac056;
+        text-align: right;
+        padding: 15px;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .main-nav #drop:checked + .menu-list {
+        display: block;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .film-header-content video {
+        width: 214px;
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 240px) {
+    .film-header-content video {
+        width: 107px;
+        height: 60px;
+    }
+}
